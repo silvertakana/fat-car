@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Racing game go brrrrrrrr</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="p5.play.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyBXffqXI6nzF5y43ZrdK503gjdAJ8pfv5I",
+    authDomain: "racia-eee69.firebaseapp.com",
+    projectId: "racia-eee69",
+    databaseURL: "https://racia-eee69-default-rtdb.firebaseio.com",
+    storageBucket: "racia-eee69.appspot.com",
+    messagingSenderId: "895502689674",
+    appId: "1:895502689674:web:2dc1a88fa71bafe273d473"
+    //project/racia-eee69/database/racia-eee69-default-rtdb
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    <script src="js/Player.js"></script>
+    <script src="js/Form.js"></script>
+    <script src="js/Game.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>
