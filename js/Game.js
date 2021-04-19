@@ -39,12 +39,25 @@ class Game {
 
     }
   }
+  end(){
+    let message;
+    if(player.rank === 1){
+      message = 'congrats bro u did it! this is ur rank => '
+      fill('yellow');
+    }else{
+      message = "you are sh*****t at this game go DIE!!!! ur rank => "
+      fill('red')
+    }
+    textSize(50)
+    
+    text(message+player.rank,10,(camera.position.y-height/2)+40)
+  }
 
   play(){
     form.hide();
     // background(ground)
     Player.getPlayerInfo();
-    
+    player.getcae();
     if(allPlayers !== undefined){
       //var display_position = 100;
       
@@ -89,10 +102,14 @@ class Game {
     }
 
     if(keyIsDown(UP_ARROW) && player.index !== null){
-      player.distance +=10
+      player.distance += 10
       player.update();
     }
-
+    if(player.distance > 4200){
+      gameState = 2;
+      player.rank += 1;
+      Player.updatecae(player.rank);
+    }
     drawSprites();
   }
 }

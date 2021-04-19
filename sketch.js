@@ -43,11 +43,13 @@ function setup(){
    
   shadow.updatePixels();
   console.log(shadow.pixels)
+  // player.updateCount(0);
+  // game.update(0);
 }
 
 
 function draw(){
-  if(playerCount >= 4 ){
+  if(playerCount >= 4){
     game.update(1);
   }else{
     game.update(0);
@@ -55,6 +57,8 @@ function draw(){
   if(gameState === 1){
     clear();
     game.play();
+  }else if(gameState === 2){
+    game.end();
   }
   // image(shadow,0, 0, width, height)
 }

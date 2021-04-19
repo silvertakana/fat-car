@@ -24,6 +24,7 @@ class Form {
     this.reset.mousePressed(()=>{
       player.updateCount(0);
       game.update(0);
+      Player.updatecae(0);
     })
     this.button.mousePressed(()=>{
       this.input.hide();
